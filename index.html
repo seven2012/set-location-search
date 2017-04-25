@@ -10,8 +10,13 @@
 </head>
 
 <body>
-    <button id="btn" type='submit'>set a</button>
-
+    <div>
+        <span>name:</span>
+        <input type="text">
+        <span>value:</span>
+        <input type="text">     
+        <button id="btn">set location.search</button>   
+    </div>
     <script>
         btn.onclick = function () {
             $.bom.search('a')
@@ -24,7 +29,9 @@
             console.log('c的值是：')
             console.log($.bom.search('c'))
             
-            console.log($.bom.search('a','newsearch'))
+             let inputs = document.querySelectorAll('input')
+             let result = $.bom.search(inputs[0].value, inputs[1].value)
+             console.log(result)
 
         }
 
