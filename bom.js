@@ -52,6 +52,9 @@ $.bom = {
                 for(let key in result){
                     newSearch += `${encodeURIComponent(key)} = ${encodeURIComponent(result[key])}&`
                 }
+                if (newSearch[newSearch.length -1]==='&'){
+                    newSearch = newSearch.slice(0,newSearch.length-1)
+                }
                 location.search = newSearch
             }
         }
