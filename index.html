@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="bom.js"></script>
+</head>
+
+<body>
+    <button id="btn" type='submit'>set a</button>
+
+    <script>
+        btn.onclick = function () {
+            $.bom.search('a')
+            console.log('a的值是：')
+            console.log($.bom.search('a'))
+            $.bom.search('b')
+            console.log('b的值是：')
+            console.log($.bom.search('b'))
+            $.bom.search('c')
+            console.log('c的值是：')
+            console.log($.bom.search('c'))
+            
+            console.log($.bom.search('a','newsearch'))
+
+        }
+
+    </script>
+</body>
+
+</html>
